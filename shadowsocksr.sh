@@ -1,9 +1,9 @@
 #!/bin/sh
 
-docker run -d -p 8000:8000 --name shadowsocksr \
+docker run -d -p xxxx:xxxx --name shadowsocksr \
        	-e "SERVER_ADDR=0.0.0.0" \
-       	-e "SERVER_PORT=8000" \
-	-e "PASSWORD=0x0000" \
+       	-e "SERVER_PORT=xxxx" \
+	-e "PASSWORD=xxxx" \
 	-e "METHOD=chacha20" \
 	-e "PROTOCOL=auth_sha1_v4_compatible" \
 	-e "OBFS=http_simple_compatible" \

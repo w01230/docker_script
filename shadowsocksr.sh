@@ -1,12 +1,10 @@
 #!/bin/sh
 
-docker run -d -p xxxx:xxxx --name shadowsocksr \
-       	-e "SERVER_ADDR=0.0.0.0" \
-       	-e "SERVER_PORT=xxxx" \
-	-e "PASSWORD=xxxx" \
-	-e "METHOD=chacha20" \
-	-e "PROTOCOL=auth_sha1_v4_compatible" \
-	-e "OBFS=http_simple_compatible" \
-	-e "TIMEOUT=300" \
+docker run -d --name shadowsocksr\
+	-p xxxx:xxxx \
+	-p xxxx:xxxx \
+	-e "SERVER_PORT0=xxxx" \
+	-e "SERVER_PORT1=xxxx" \
+	-v /root:/etc/shadowsocksr \
 	--restart=always \
-	breakwa11/shadowsocksr:manyuser
+	shadowsocksr:1.0

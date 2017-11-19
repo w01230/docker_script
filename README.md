@@ -6,3 +6,5 @@ include
 shadowsocksr
 
 strongswan
+
+xware

@@ -1,4 +1,5 @@
 docker run -d \
         --name=xware \
-        -v /home/john/downloads/thunder:/app/TDDOWNLOAD \
-        xware:latest
+	--restart=always \
+        -v /nas/download:/app/TDDOWNLOAD \
+        xware:1.0

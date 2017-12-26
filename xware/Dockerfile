@@ -3,19 +3,14 @@
 
 FROM debian:stretch-slim
 
-RUN /bin/sed -i.bak 's/archive/cn\.archive/' /etc/apt/sources.list
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh && \
-    apt-get update && apt-get install -y procps zlib1g-dev lib32z1 lib32ncurses5 && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-    mkdir -p /app/bin
+RUN apt-get update && \
+    apt-get install -y libc6-i386 lib32z1 procps &&\
+    apt-get clean
 
-COPY thunder /app/
-COPY start.sh /app/
-VOLUME /app/TDDOWNLOAD
+WORKDIR /xware
+ADD Xware1.0.31_x86_32_glibc.tar.gz /xware
+COPY monitor.sh /xware
 
-EXPOSE 9000
-WORKDIR /app
-RUN chmod +x start.sh && chmod +x ./bin/portal
-CMD ["./start.sh"]
+VOLUME /data
 
+CMD ["./monitor.sh"]

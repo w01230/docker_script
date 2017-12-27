@@ -8,7 +8,7 @@ do
 	echo "restarting..."
         ./portal
     else
-        sleep 60
+        sleep 30
     fi
 done
 

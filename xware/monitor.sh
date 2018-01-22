@@ -6,7 +6,7 @@ do
     pid=`ps -ef|grep ETMDaemon|grep -v grep|awk '{print $2}'`
     if [ -z "$pid" ]; then
 	echo "restarting..."
-        ./portal
+        portal
     else
         sleep 30
     fi

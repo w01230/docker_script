@@ -1,4 +1,4 @@
-sudo docker run -d \
+docker run -d \
         --name=xware \
 	--restart=always \
         -v /nas/download:/data \

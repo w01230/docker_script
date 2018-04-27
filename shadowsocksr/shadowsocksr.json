@@ -2,12 +2,13 @@
 	"server":"0.0.0.0",
 	"server_ipv6":"[::]",
 	"port_password": {
-		"xxxx":"xxxxxx",
-		"xxxx":"xxxxxx"
+		"xxxx":"foobar",
+		"xxxx":"foobar"
 	},
-	"timeout":300,
+	"timeout":120,
 	"method":"chacha20",
 	"protocol":"auth_sha1_v4_compatible",
 	"obfs":"http_simple_compatible",
+	"mode":"tcp_and_udp",
 	"fast_open": false
 }

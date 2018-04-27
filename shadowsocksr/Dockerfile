@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine
 MAINTAINER JohnW <4585006@gmail.com>
 
 ARG BRANCH=manyuser

@@ -4,11 +4,11 @@ if [ "$1" == "init" ]; then
 	echo "strongswan init"
 	docker run -d --rm \
 		-v "${PWD}/data:/mnt" \
-		-e VPN_DOMAIN=1.0.0.0 \
-		-e VPN_USERNAME=foobar!	 \
-		-e VPN_PASSWORD=foobar! \
-		-e VPN_P12_PASSWORD=foobar! \
-		strongswan:1.0 \
+		-e VPN_DOMAIN=ip \
+		-e VPN_USERNAME=username	 \
+		-e VPN_PASSWORD=password \
+		-e VPN_P12_PASSWORD=password \
+		strongswan \
 		init
 else
 	echo "strongswan run"
@@ -23,5 +23,5 @@ else
 		-v "${PWD}/data/ipsec.conf:/etc/ipsec.conf:ro" \
 		-v "${PWD}/data/ipsec.secrets:/etc/ipsec.secrets:ro" \
 		-v "${PWD}/data/strongswan.conf:/etc/strongswan.conf:ro" \
-		strongswan:1.0 
+		strongswan 
 fi

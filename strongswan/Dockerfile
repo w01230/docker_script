@@ -2,7 +2,7 @@
 # StrongSwan VPN + Alpine Linux
 #
 
-FROM alpine:3.6
+FROM alpine
 
 ENV STRONGSWAN_RELEASE https://download.strongswan.org/strongswan.tar.bz2
 

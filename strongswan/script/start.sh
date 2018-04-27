@@ -1,4 +1,5 @@
 #!/bin/bash -e
+
 if [ "$1" == "init" ]; then
 	echo "Intializing config"
 	./root/init.sh

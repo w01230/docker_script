@@ -1,7 +1,7 @@
 FROM alpine
 MAINTAINER JohnW <4585006@gmail.com>
 
-ARG VERSION=3.1.3
+ARG VERSION=3.2.0
 ARG URL=https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$VERSION/shadowsocks-libev-$VERSION.tar.gz
 ARG SOURCE=shadowsocks-libev-$VERSION
 ARG WORK=/root

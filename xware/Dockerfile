@@ -10,8 +10,8 @@ RUN apt-get update && \
     apt-get install -y libc6-i386 lib32z1 procps &&\
     apt-get clean
 
-COPY monitor.sh /usr/bin/
+COPY exec.sh /usr/bin/
 
 VOLUME /data
 
-CMD [ "monitor.sh" ]
+CMD [ "exec.sh" ]

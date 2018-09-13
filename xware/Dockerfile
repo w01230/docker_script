@@ -3,8 +3,9 @@
 
 FROM debian:stretch-slim
 
-
 ADD Xware1.0.31_x86_32_glibc.tar.gz /usr/bin/
+
+VOLUME /data
 
 RUN apt-get update && \
     apt-get install -y libc6-i386 lib32z1 procps &&\
@@ -12,6 +13,4 @@ RUN apt-get update && \
 
 COPY exec.sh /usr/bin/
 
-VOLUME /data
-
-CMD [ "exec.sh" ]
+ENTRYPOINT [ "exec.sh" ]

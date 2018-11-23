@@ -1,5 +1,5 @@
 FROM alpine
-MAINTAINER JohnW <4585006@gmail.com>
+MAINTAINER J.W <4585006@gmail.com>
 
 ARG VERSION=3.2.1
 ARG URL=https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$VERSION/shadowsocks-libev-$VERSION.tar.gz

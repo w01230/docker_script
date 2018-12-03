@@ -1,12 +1,10 @@
 FROM alpine
 MAINTAINER J.W <4585006@gmail.com>
 
-ARG VERSION=3.2.1
+ARG VERSION=3.2.3
 ARG URL=https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$VERSION/shadowsocks-libev-$VERSION.tar.gz
 ARG SOURCE=shadowsocks-libev-$VERSION
 ARG WORK=/root
-
-ENV SERVER_PORT=8200
 
 WORKDIR $WORK
 
@@ -21,6 +19,6 @@ RUN apk --no-cache add bash libev libsodium pcre c-ares mbedtls\
     && rm -rf $SOURCE \
     && apk del BUILD_DEP 
     
-EXPOSE $SERVER_PORT
+
 ENTRYPOINT ["ss-server"]
 CMD ["-c", "/etc/shadowsocks/shadowsocks.json"]
